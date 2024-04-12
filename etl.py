@@ -2,7 +2,9 @@ import pandas as pd
 import os
 import glob
 import pandera
+from utils_log import log_decorator
 
+@log_decorator
 # Uma função de extract que lê os Arquivos e concatena os Arquivos
 def extrair_dados(pasta: str) -> pd.DataFrame:
     arquivos_json = glob.glob(os.path.join(pasta, '*.json'))

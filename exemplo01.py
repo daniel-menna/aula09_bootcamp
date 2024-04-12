@@ -1,11 +1,7 @@
-from loguru import logger
+from utils_log import log_decorator
 
-logger.add("meu_app.log")
-
+@log_decorator
 def somar(x,y) :
-    logger.info(x)
-    logger.info(y)
-    logger.info(x + y)
     return x + y
 
 somar(2,"3")
