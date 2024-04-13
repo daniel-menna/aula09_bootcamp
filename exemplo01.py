@@ -1,7 +1,12 @@
-from utils_log import log_decorator
+from log import log_decorator
 
-@log_decorator
-def somar(x,y) :
-    return x + y
+from timer import time_measure_decorator
 
-somar(2,"3")
+from hello import hello
+
+
+@hello
+def soma_1(a, b):
+    return a + b
+
+soma_1(1,2)

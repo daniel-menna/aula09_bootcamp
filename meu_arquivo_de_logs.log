@@ -1,11 +1,20 @@
-2024-04-12T09:50:01.638490-0300 INFO Chamando função 'extrair_dados' com args ('data',) e kwargs {} utils_log.py
-2024-04-12T09:50:01.670127-0300 INFO Função 'extrair_dados' retornou             Produto    Categoria  Quantidade  Venda        Data
-0    Notebook Gamer  Eletrônicos           3   1500  2023-01-15
-1     Mouse Sem Fio  Eletrônicos          10     30  2023-01-15
-2  Teclado Mecânico  Eletrônicos           5    100  2023-01-15
-3    Notebook Gamer  Eletrônicos           3   1500  2023-01-15
-4     Mouse Sem Fio  Eletrônicos          10     30  2023-01-15
-5  Teclado Mecânico  Eletrônicos           5    100  2023-01-15
-6    Notebook Gamer  Eletrônicos           3   1500  2023-01-15
-7     Mouse Sem Fio  Eletrônicos          10     30  2023-01-15
-8  Teclado Mecânico  Eletrônicos           5    100  2023-01-15 utils_log.py
+2024-04-12T09:54:50.009849-0300 INFO Chamando função 'somar' com args (2, '3') e kwargs {} utils_log.py
+2024-04-12T09:54:50.009849-0300 ERROR Exceção capturada em 'somar': unsupported operand type(s) for +: 'int' and 'str' utils_log.py
+Traceback (most recent call last):
+
+  File "C:\Users\danie\workspaces\aula09\exemplo01.py", line 7, in <module>
+    somar(2,"3")
+    └ <function somar at 0x000001FC8DBB8FE0>
+
+> File "C:\Users\danie\workspaces\aula09\utils_log.py", line 24, in wrapper
+    result = func(*args, **kwargs)
+             │     │       └ {}
+             │     └ (2, '3')
+             └ <function somar at 0x000001FC8D91A2A0>
+
+  File "C:\Users\danie\workspaces\aula09\exemplo01.py", line 5, in somar
+    return x + y
+           │   └ '3'
+           └ 2
+
+TypeError: unsupported operand type(s) for +: 'int' and 'str'
